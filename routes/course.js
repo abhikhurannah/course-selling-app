@@ -1,5 +1,6 @@
 const {Router} = require('express');
 const courseRouter = Router();
+const { CourseModel,PurchaseModel } = require('../db');
 
 courseRouter.post('/purchase', function(req, res) {
     // logic to purchase a course would go here intergrating with payment gateway

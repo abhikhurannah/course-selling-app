@@ -1,5 +1,6 @@
 const {Router} = require('express');
 const adminRouter = Router();
+const { AdminModel } = require('../db');
 
 adminRouter.post('/signin', function(req, res) {
     // logic to sign in an admin would go here
