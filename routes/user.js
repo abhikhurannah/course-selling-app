@@ -3,7 +3,12 @@ const userRouter = Router();
 const { UserModel, PurchaseModel } = require('../db');
 
 userRouter.post('/signup', function(req, res) {
+    const { email, password, FirstName, LastName } = req.body;
+    const newUser = new UserModel({ email, password, FirstName, LastName });
+    newUser.save();
+
     res.json({
+        user: newUser,
         message: "User signed up successfully"
     });
 });
