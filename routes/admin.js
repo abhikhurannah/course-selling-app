@@ -15,20 +15,20 @@ adminRouter.post('/signup', function(req, res) {
     });
 });
 
-adminRouter.post('/course', function(req, res) {
+adminRouter.post('/', function(req, res) {
     // logic to create a course would go here
     res.json({
         message: "Course created successfully"
     });
 });
-adminRouter.put('/course/', function(req, res) {
+adminRouter.put('/', function(req, res) {
     // logic to update a course would go here
     res.json({
         message: "Course updated successfully"
     });
 });
 
-adminRouter.get('/all-courses', function(req, res) {
+adminRouter.get('/bulk', function(req, res) {
     // logic to get all courses would go here
     res.json({
         message: "All courses retrieved successfully"
